@@ -42,7 +42,7 @@ BOOL InjectHelper_LoadRemoteLibrary(HANDLE hProcess, LPVOID lpRemoteDllWideNameA
 	return !!exitCode; // Convert non-boolean value to 0 or 1
 }
 
-BOOL InjectHelper_InjectProcess(HANDLE hProcess, LPCWSTR lpDllName) {
+BOOL InjectHelper_InjectIntoProcess(HANDLE hProcess, LPCWSTR lpDllName) {
 	size_t dllNameCbSize = 0;
 	if (StringCbLengthW(lpDllName, MAX_PATH * sizeof(WCHAR), &dllNameCbSize) != S_OK) {
 		return FALSE;

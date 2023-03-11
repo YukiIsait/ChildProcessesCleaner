@@ -25,7 +25,7 @@ int wmain(int argc, wchar_t** argv) {
 		MessageBoxW(NULL, L"Debug privilege setup failed.", L"Error", MB_ICONERROR);
 	}
 
-	if (!InjectHelper_InjectProcess(mainPi.hProcess, argv[2])) {
+	if (!InjectHelper_InjectIntoProcess(mainPi.hProcess, argv[2])) {
 		ret = FALSE;
 		TerminateProcess(mainPi.hProcess, 0);
 		MessageBoxW(NULL, L"Injection failed.", L"Error", MB_ICONERROR);
