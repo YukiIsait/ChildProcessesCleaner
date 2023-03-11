@@ -11,7 +11,7 @@ The payload of the Cleaner is injected into the host process, and it will kill t
 
 ### Example
 
-> e.g. Adobe Photoshop creates some child processes on startup and does not clean them up on exit. (Fuck Adobe!)
+> e.g. Adobe Photoshop creates some child processes on startup and does not clean them up on exit. (So, Fuck you Adobe!)
 
 The simple way is to create a shortcut which execute the following command to replace the original one.
 
