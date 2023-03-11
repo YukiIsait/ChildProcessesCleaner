@@ -1,7 +1,7 @@
 ﻿#include <Windows.h>
 #include <TlHelp32.h>
 
-BOOL TerminateSubProcess() {
+BOOL TerminateSubProcesses() {
 	DWORD currentProcessId = GetCurrentProcessId();
 	PROCESSENTRY32W processEntry = {
 		.dwSize = sizeof(PROCESSENTRY32W)
@@ -32,7 +32,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwUlReasonForCall, LPVOID lpReserve
 		case DLL_THREAD_DETACH:
 			break;
 		case DLL_PROCESS_DETACH:
-			TerminateSubProcess();
+			TerminateSubProcesses();
 			break;
 	}
 	return TRUE;
