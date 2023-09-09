@@ -1,6 +1,6 @@
 # Descriptions
 
-The payload of the Cleaner is injected into the host process, and it will kill the child processes created by the host after the process is stopped.
+The payload of the Cleaner is injected into the host process, and it kills the child processes created by the host after the process is stopped.
 
 ## Usage
 
